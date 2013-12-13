@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DEST="/usr/share/inkscape/templates/"
+
+echo "*******************************************************************************"
+echo "Preparado para copiar os seguintes ficheiros:"
+ls -lhG *.svg
+echo ""
+echo "Destino: $DEST"
+echo "Presiona calquera tecla para continuar, CTRL^C para abortar..."
+read -n 1 -s
+sudo cp ./*.svg $DEST
+echo "Presiona calquera tecla para finalizar"
+read -s -n 1
